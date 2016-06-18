@@ -31,7 +31,7 @@ namespace Rogiel\StarReplay\Event\Game;
 class DecrementGameTimeRemainingEvent extends AbstractGameEvent {
 
 	/** @var integer */
-	public $decrementMs;
+	public $decrementSeconds;
 
     /**
      * @return string the event name
@@ -44,10 +44,10 @@ class DecrementGameTimeRemainingEvent extends AbstractGameEvent {
      * @return string a string representation of the event
      */
 	public function __toString() {
-	    return $this->getEventName()."{ decrementMs = $this->decrementMs }";
+	    return $this->getEventName()."{ decrementSeconds = $this->decrementSeconds }";
 	}
 
 	/** @return integer */
-	public function getDecrementMs() { return $this->decrementMs; }
+	public function getDecrementSeconds() { return $this->decrementSeconds; }
 
 }

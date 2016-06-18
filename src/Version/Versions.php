@@ -61,9 +61,23 @@ class Versions {
 			34835 => 'Rogiel\StarReplay\Version\Version34835',
 			36442 => 'Rogiel\StarReplay\Version\Version36442',
 			38215 => 'Rogiel\StarReplay\Version\Version38215',
+			38535 => 'Rogiel\StarReplay\Version\Version38535',
+			38624 => 'Rogiel\StarReplay\Version\Version38624',
 			38749 => 'Rogiel\StarReplay\Version\Version38749',
 			38996 => 'Rogiel\StarReplay\Version\Version38996',
-			39576 => 'Rogiel\StarReplay\Version\Version39576'
+			39117 => 'Rogiel\StarReplay\Version\Version39117',
+			39576 => 'Rogiel\StarReplay\Version\Version39576',
+			39948 => 'Rogiel\StarReplay\Version\Version39948',
+			40384 => 'Rogiel\StarReplay\Version\Version40384',
+			40977 => 'Rogiel\StarReplay\Version\Version40977',
+			41128 => 'Rogiel\StarReplay\Version\Version41128',
+			41219 => 'Rogiel\StarReplay\Version\Version41219',
+			41743 => 'Rogiel\StarReplay\Version\Version41743',
+			41973 => 'Rogiel\StarReplay\Version\Version41973',
+			42253 => 'Rogiel\StarReplay\Version\Version42253',
+			42932 => 'Rogiel\StarReplay\Version\Version42932',
+			43199 => 'Rogiel\StarReplay\Version\Version43199',
+			43478 => 'Rogiel\StarReplay\Version\Version43478'
 		];
     }
 
