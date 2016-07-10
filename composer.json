@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "php": "^5.5.0",
+        "php": ">=5.5",
         "rogiel/mpq": "^0.2.1",
         "ocramius/generated-hydrator": "^1.2"
     },
