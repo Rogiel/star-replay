@@ -30,7 +30,7 @@ namespace Rogiel\StarReplay\Event\Game;
 
 class TriggerCameraMoveEvent extends AbstractGameEvent {
 
-	/** @var \Rogiel\StarReplay\Event\Game\Entity\SubgroupUnit */
+	/** @var array */
 	public $reason;
 
     /**
@@ -47,7 +47,7 @@ class TriggerCameraMoveEvent extends AbstractGameEvent {
 	    return $this->getEventName()."{ reason = $this->reason }";
 	}
 
-	/** @return \Rogiel\StarReplay\Event\Game\Entity\SubgroupUnit */
+	/** @return array */
 	public function getReason() { return $this->reason; }
 
 }
