@@ -240,6 +240,9 @@ class Replay {
 		}
 
 		$stream = $this->file->openStream('replay.tracker.events');
+//        echo bin2hex($stream->readBytes(10));
+//        die();
+
 		$stream = new BitStream($stream);
 		$parser = new ReplayStreamParser($stream);
 		$serializer = new VersionedSerializer($parser, $this->getVersion()->getTree(), $this->hydratorFactory);

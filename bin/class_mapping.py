@@ -58,9 +58,11 @@ def detect_class_types(protocol):
                     for r in protocol.typeinfos[t[1]][1][0]:
                         if r[0] == "m_gameOptions":
                             mapping[r[1]] = 'Rogiel\StarReplay\Metadata\Init\GameOptions'
-
                 if t[0] == "m_lobbyState":
                     mapping[t[1]] = 'Rogiel\StarReplay\Metadata\Init\LobbyState'
+                    for s in protocol.typeinfos[t[1]][1][0]:
+                        if s[0] == "m_slots":
+                            mapping[protocol.typeinfos[s[1]][1][1]] = 'Rogiel\StarReplay\Metadata\Init\LobbySlot'
 
     for index, type in enumerate(protocol.typeinfos):
         if type[0] == '_struct':

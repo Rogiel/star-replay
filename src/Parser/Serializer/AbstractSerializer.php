@@ -103,8 +103,7 @@ abstract class AbstractSerializer implements Serializer{
 			);
 		} else if($rootNode instanceof ChoiceNode) {
 			return $this->decorateObject(
-				$this->parseChoice($rootNode)
-				,
+				$this->parseChoice($rootNode),
 				$rootNode
 			);
 		} else if($rootNode instanceof IntegerNode) {

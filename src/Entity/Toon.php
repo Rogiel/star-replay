@@ -36,6 +36,60 @@ class Toon extends AbstractEntity {
 	private $realm;
 	private $id;
 
+    /**
+     * @return mixed
+     */
+    public function getRegion() {
+        return $this->region;
+    }
 
+    /**
+     * @param mixed $region
+     */
+    public function setRegion($region) {
+        $this->region = $region;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProgramId() {
+        return $this->programId;
+    }
+
+    /**
+     * @param mixed $programId
+     */
+    public function setProgramId($programId) {
+        $this->programId = $programId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRealm() {
+        return $this->realm;
+    }
+
+    /**
+     * @param mixed $realm
+     */
+    public function setRealm($realm) {
+        $this->realm = $realm;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id) {
+        $this->id = $id;
+    }
 
 }

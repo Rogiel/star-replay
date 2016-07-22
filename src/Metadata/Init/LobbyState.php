@@ -47,7 +47,7 @@ class LobbyState {
 	private $maxObservers;
 
 	/**
-	 * @var integer
+	 * @var LobbySlot[]
 	 */
 	private $slots;
 
@@ -108,7 +108,7 @@ class LobbyState {
 	}
 
 	/**
-	 * @return int
+	 * @return LobbySlot[]
 	 */
 	public function getSlots() {
 		return $this->slots;

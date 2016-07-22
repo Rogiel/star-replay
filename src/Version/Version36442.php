@@ -409,7 +409,9 @@ Version36442::$TREE = new Tree([
 	"tandemLeaderUserId" => array('type' => 59, 'tag' => -3),
 	"commander" => array('type' => 46, 'tag' => -2),
 	"commanderLevel" => array('type' => 6, 'tag' => -1),
-]),
+],
+	'Rogiel\StarReplay\Metadata\Init\LobbySlot'
+),
 66 => new ArrayNode(
 	new IntegerNode(5, 0),
 	65

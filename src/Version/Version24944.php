@@ -366,7 +366,9 @@ Version24944::$TREE = new Tree([
 	"rewards" => array('type' => 55, 'tag' => -3),
 	"toonHandle" => array('type' => 15, 'tag' => -2),
 	"licenses" => array('type' => 56, 'tag' => -1),
-]),
+],
+	'Rogiel\StarReplay\Metadata\Init\LobbySlot'
+),
 58 => new ArrayNode(
 	new IntegerNode(5, 0),
 	57

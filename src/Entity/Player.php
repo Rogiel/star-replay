@@ -85,12 +85,36 @@ class Player extends AbstractEntity {
 	 */
 	private $hero;
 
+    // -----------------------------------------------------------------------------------------------------------------
+
+    /**
+     * @return string
+     */
+    public function getRawName() {
+        return $this->name;
+    }
+
 	/**
 	 * @return string
 	 */
 	public function getName() {
-		return $this->name;
+	    $hasClanTag = strpos($this->name, '<sp/>');
+        if(!$hasClanTag) {
+            return $this->name;
+        }
+        return substr($this->name, $hasClanTag + 5);
 	}
+
+    /**
+     * @return string
+     */
+    public function getClanTag() {
+        $hasClanTag = strpos($this->name, '<sp/>');
+        if(!$hasClanTag) {
+            return NULL;
+        }
+        return substr($this->name, 0, $hasClanTag);
+    }
 
 	/**
 	 * @return Toon
@@ -144,7 +168,7 @@ class Player extends AbstractEntity {
 	/**
 	 * @return boolean
 	 */
-	public function isResult() {
+	public function getResult() {
 		return $this->result;
 	}
 
