@@ -30,6 +30,7 @@ namespace Rogiel\StarReplay;
 
 use Rogiel\MPQ\MPQFile;
 use Rogiel\MPQ\Stream\MemoryStream;
+use Rogiel\StarReplay\Attribute\AttributeMap;
 use Rogiel\StarReplay\Event\AbstractEvent;
 use Rogiel\StarReplay\Exception\ReplayException;
 use Rogiel\StarReplay\Hydrator\GeneratedHydratorFactory;
@@ -86,7 +87,12 @@ class Replay {
 	 */
 	private $initData;
 
-	// -----------------------------------------------------------------------------------------------------------------
+    /**
+     * @var AttributeMap
+     */
+    private $attributeMap;
+
+    // -----------------------------------------------------------------------------------------------------------------
 
 	/**
 	 * Replay constructor.
@@ -160,6 +166,12 @@ class Replay {
 		$serializer = new BitPackedSerializer($parser, $this->getVersion()->getTree(), $this->hydratorFactory);
 		return $serializer->parse($this->getVersion()->getReplayInitDataNode());
 	}
+
+    private function parseAttributeMap() {
+        $this->file->parse();
+        $stream = $this->file->openStream('replay.attributes.events');
+        return new AttributeMap($stream);
+    }
 
 	// -----------------------------------------------------------------------------------------------------------------
 	// EVENT PARSERS
@@ -301,6 +313,19 @@ class Replay {
 		}
 		return $this->initData;
 	}
+
+    /**
+     * Gets the replay attribute map. If the data is not yet parsed,
+     * it is parsed and its values are stored in memory.
+     *
+     * @return AttributeMap
+     */
+    public function getAttributeMap() {
+        if($this->attributeMap === null) {
+            $this->attributeMap = $this->parseAttributeMap();
+        }
+        return $this->attributeMap;
+    }
 
 	// -----------------------------------------------------------------------------------------------------------------
 
