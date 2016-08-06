@@ -80,7 +80,11 @@ class Versions {
 			43478 => 'Rogiel\StarReplay\Version\Version43478',
 			44169 => 'Rogiel\StarReplay\Version\Version44169',
 			44293 => 'Rogiel\StarReplay\Version\Version44293',
-			44401 => 'Rogiel\StarReplay\Version\Version44401'
+			44401 => 'Rogiel\StarReplay\Version\Version44401',
+			44743 => 'Rogiel\StarReplay\Version\Version44743',
+			44765 => 'Rogiel\StarReplay\Version\Version44765',
+			44983 => 'Rogiel\StarReplay\Version\Version44983',
+			45186 => 'Rogiel\StarReplay\Version\Version45186'
 		];
     }
 
