@@ -1,4 +1,6 @@
 # Star Replay
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRogiel%2Fstar-replay.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRogiel%2Fstar-replay?ref=badge_shield)
+
 
 This library allows you to read StarCraft II replay files from PHP.
 
@@ -41,3 +43,7 @@ foreach($replay->getGameEvents() as $timestamp => $event) {
 	// since we are using generators, the events will stream linearly from begining to end
 }
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRogiel%2Fstar-replay.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FRogiel%2Fstar-replay?ref=badge_large)
